@@ -11,3 +11,23 @@
 2) 필수 과목에 따른 grade 산출 방법의 달라짐 -> 상속으로 해결할 수있을 것 같다.
 
 아직 많은 부분이 헷갈리는 것 같아 한번 더 내용 복습을 한 후 다시 생각해야할 것 같다.
+
+[2번째 시도]
+개념정리를 조금 한후 다시 이 코드를 생각해 보았다.
+
+다른 과목마다, 다른 학생, 다른 점수 가 있기때문에 Student클래스에는 score 리스트를, Subject클래스에는 Student 리스트를 구현 하였다. 
+그런데 이렇게 구현하다보니, 리스트에서 받아온 majorSb가 
+
+-----------------------------------
+	국어 수강생  학점
+이름 |  학번  |중점과목| 점수 
+-----------------------------------
+강감찬 | 211213 | gradeprogramwithoutinterface.Subject@5305068a
+김유신 | 212330 | gradeprogramwithoutinterface.Subject@1f32e575
+신사임당 | 201518 | gradeprogramwithoutinterface.Subject@5305068a
+강감찬 | 202360 | gradeprogramwithoutinterface.Subject@5305068a
+홍길동 | 201290 | gradeprogramwithoutinterface.Subject@1f32e575
+
+이렇게 주소창 형식으로 뜬다, 그리고 interface라는 글자가 붙는다. 
+
+강의를 더 듣고 interface가 무엇인지 더 알아보고, 이 프로그램을 더 짜보려고 한다.
