@@ -18,5 +18,9 @@ ORACLE, MYSQL 등등이 존재, 데이터들을 관리할 수 있는 역할
 인터페이스 없이 그대로 DB를 만들면 다른 언어로 만들 경우 중복이되고, 오버헤드가 커질 수 있음.
 따라서 인터페이스를 만들어 각각의 타입을 만들어놓음 만약 파일이 ORACLE일경우 ORACLEDao를 MySQL이면 MySQLDao를 사용
 
-[DB불러오기]
-1.
+[파일 불러오기]
+1. FileInputSystem fis = new FileInputSystem("파일이름"); //파일 찾기
+2. Properties prop = new Propeties(); //어떤 파일인지, 파일 특성을 저장할 공간 생성
+3. prop.load(fis); //파일로드
+4. String dbtype = prop.getProperty("DBTYPE");  //DBTYBE과 페어인 값을 찾음 즉, 파일에서 DBTYPE=값을 찾아 값을 반환
+5. dbtype.equals("값")으로 비교 가능!
